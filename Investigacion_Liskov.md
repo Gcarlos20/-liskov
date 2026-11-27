@@ -191,7 +191,7 @@ Fuente: [Java Language Specification, §8.4.8.3](https://docs.oracle.com/javase/
 
 ---
 
-## Diapositiva 10 — Conclusiones y bibliografía::
+## Diapositiva 10 — Conclusiones y bibliografía:::
 
 **Conclusiones**
 

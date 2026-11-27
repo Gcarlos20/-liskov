@@ -61,7 +61,7 @@ El cliente llama al contrato visible en `Figura`; durante la ejecución Java sel
 
 Regla mnemotécnica: **no fortalecer precondiciones ni debilitar postcondiciones**. El análisis formal también considera invariantes y propiedades históricas.
 
-Fuente: [Liskov y Wing, 1994](https://doi.org/10.1145/197320.197383).
+Fuente: [Liskov y Wing, 1994](https://doi.org/10.1145/197320.197383)..
 
 ---
 
@@ -191,7 +191,7 @@ Fuente: [Java Language Specification, §8.4.8.3](https://docs.oracle.com/javase/
 
 ---
 
-## Diapositiva 10 — Conclusiones y bibliografía
+## Diapositiva 10 — Conclusiones y bibliografía::
 
 **Conclusiones**
 

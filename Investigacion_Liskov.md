@@ -83,6 +83,27 @@ Si `Cuadrado extends Rectangulo` y cada setter actualiza ambos lados, el área f
 
 **Diagnóstico:** la subclase compila, pero contradice una expectativa válida creada por la interfaz mutable de `Rectangulo`. La relación geométrica “un cuadrado es un rectángulo” no basta para justificar esa herencia de implementación.
 
+```mermaid
+classDiagram
+    class Rectangulo {
+        +setAncho(double)
+        +setAlto(double)
+        +area() double
+    }
+    class Cuadrado {
+        +setAncho(double)
+        +setAlto(double)
+        +area() double
+    }
+    Rectangulo <|-- Cuadrado
+    class Cliente {
+        +verificarArea(Rectangulo)
+    }
+    Cliente ..> Rectangulo : espera ancho y alto independientes
+```
+
+**Lectura del diagrama:** el cliente programa contra `Rectangulo`; los setters redefinidos por `Cuadrado` cambian esa expectativa.
+
 ---
 
 ## Diapositiva 7 — Diseño Java basado en una interfaz
@@ -111,6 +132,31 @@ final class Cuadrado implements Figura {
 ```
 
 `Rectangulo` y `Cuadrado` comparten el contrato `Figura.area()` y cada uno preserva sus propias reglas. El cliente puede recibir ambos como `Figura` sin depender de setters incompatibles.
+
+```mermaid
+classDiagram
+    class Figura {
+        <<interface>>
+        +area() double
+    }
+    class Rectangulo {
+        -ancho double
+        -alto double
+        +area() double
+    }
+    class Cuadrado {
+        -lado double
+        +area() double
+    }
+    Figura <|.. Rectangulo
+    Figura <|.. Cuadrado
+    class Cliente {
+        +calcular(Figura) double
+    }
+    Cliente ..> Figura : depende del contrato
+```
+
+**Lectura del diagrama:** las dos clases implementan `Figura`; el cliente depende solo del método `area()`.
 
 ---
 

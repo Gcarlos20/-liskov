@@ -65,7 +65,7 @@ Fuente: [Liskov y Wing, 1994](https://doi.org/10.1145/197320.197383).
 
 ---
 
-## Diapositiva 6 — Ejemplo Java que viola el LSP
+## Diapositiva 6 — Ejemplo Java que viola el LSP.
 
 El cliente espera que ancho y alto se puedan cambiar independientemente:
 
@@ -108,7 +108,7 @@ classDiagram
 
 ## Diapositiva 7 — Diseño Java basado en una interfaz
 
-Si el código cliente solo necesita calcular áreas, puede depender de una interfaz pequeña:
+Si el código cliente solo necesita calcular áreas, puede depender de una interfaz pequeña::
 
 ```java
 interface Figura {

@@ -17,10 +17,10 @@ En Java, esto afecta a clases derivadas con `extends` y a implementaciones de in
 
 ## Diapositiva 2 — Objetivo y método de investigación
 
-- **Objetivo:** explicar el origen, las reglas y la aplicación del LSP en programas Java.
-- **Método:** revisión documental de los trabajos de Liskov (1987), Liskov y Wing (1994), y la especificación oficial del lenguaje Java.
-- **Alcance:** diseño de jerarquías de clases, sobrescritura de métodos e interfaces.
-- **Hallazgo principal:** que una clase compile y use `@Override` no garantiza por sí solo que respete el contrato conductual de su supertipo.
+- **Objetivo:** entender cómo aplicar el principio de sustitución de Liskov al diseñar programas Java. Para ello, se explica qué promete una clase base o interfaz y qué debe conservar una subclase.
+- **Método de investigación:** se revisaron dos trabajos académicos sobre el origen y la definición del principio, junto con la especificación oficial de Java. Se compararon esas ideas con ejemplos de clases, métodos sobrescritos e interfaces.
+- **Alcance:** la investigación se concentra en las relaciones entre tipos en Java: cuándo una clase extiende otra con `extends`, cuándo implementa un contrato con `implements` y cómo la sobrescritura puede cambiar el comportamiento.
+- **Hallazgo principal:** el compilador puede confirmar que una sobrescritura respeta ciertas reglas del lenguaje, pero no puede asegurar que el nuevo comportamiento cumpla las expectativas de quienes usan la clase base. Por eso también hay que revisar el contrato y probar el comportamiento.
 
 ---
 
